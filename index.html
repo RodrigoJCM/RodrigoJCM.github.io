@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rodrigo Machado | Portefólio</title>
+<meta name="description" content="Portefólio de Rodrigo Machado: projetos e contacto.">
+<style>
+  :root {
+    --bg: #EDEFF7;
+    --ink: #1B1F3B;
+    --muted: #51567A;
+    --line: #C3C9E3;
+    --accent: #0F766E;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12141F;
+      --ink: #E8EAF6;
+      --muted: #A3A9CF;
+      --line: #2B2F4A;
+      --accent: #5EEAD4;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 1.0625rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+
+  a { color: var(--accent); text-underline-offset: 0.2em; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    gap: 4rem;
+  }
+
+  /* Coluna lateral: o nome é o elemento principal da página */
+  aside {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  h1 {
+    margin: 0 0 1.5rem;
+    font: 700 clamp(2.4rem, 4.5vw, 3rem)/0.95 Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    letter-spacing: -0.02em;
+  }
+  nav ul { list-style: none; margin: 0; padding: 0; }
+  nav a {
+    display: block;
+    padding: 0.35rem 0 0.35rem 0.9rem;
+    border-left: 3px solid var(--line);
+    color: var(--ink);
+    text-decoration: none;
+  }
+  nav a:hover { border-left-color: var(--accent); color: var(--accent); }
+  aside small { color: var(--muted); }
+
+  main { padding: 3rem 0 5rem; }
+  section + section { margin-top: 4.5rem; }
+  h2 {
+    margin: 0 0 1.25rem;
+    font: 700 1.7rem/1.2 Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  }
+
+  .photo {
+    display: block;
+    width: min(100%, 26vh);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin: 0 0 1.5rem;
+    border-radius: 4px;
+  }
+  .intro { max-width: 36rem; font-size: 1.35rem; line-height: 1.5; margin: 0; }
+
+  /* Projetos: lista com o ano à esquerda, sem cartões */
+  .project {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .project:last-child { border-bottom: 1px solid var(--line); }
+  .project time { color: var(--muted); }
+  .project h3 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+  .project p { margin: 0; max-width: 38rem; color: var(--muted); }
+
+  .contact { list-style: none; margin: 0; padding: 0; }
+  .contact li { padding: 0.25rem 0; }
+
+  @media (max-width: 760px) {
+    .wrap { grid-template-columns: 1fr; gap: 0; }
+    aside { position: static; height: auto; padding: 2rem 0 0; }
+    nav { margin-bottom: 1rem; }
+    nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+    nav a { border-left: 0; padding: 0.25rem 0; }
+    aside small { display: none; }
+    main { padding-top: 1.5rem; }
+    .project { grid-template-columns: 1fr; gap: 0.25rem; }
+    .photo { width: 8rem; margin-bottom: 1rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <aside>
+    <div>
+      <h1>Rodrigo Machado</h1>
+      <img class="photo" src="foto.jpg" width="640" height="640" alt="Rodrigo Machado de óculos de sol, junto ao rio Douro, com a Ponte Luís I ao fundo">
+      <nav aria-label="Secções">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <small>© 2026 Rodrigo Machado</small>
+  </aside>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre</h2>
+      <!-- EDITA: duas ou três frases sobre ti -->
+      <p class="intro">Escreve aqui duas ou três frases: o que estudas, o que gostas de construir e o que andas a aprender neste momento.</p>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+
+      <!-- EDITA: troca o ano, o título, a descrição e o link de cada projeto; copia o bloco para adicionar mais -->
+      <article class="project">
+        <time>20XX</time>
+        <div>
+          <h3><a href="https://github.com/RodrigoJCM">Nome do projeto</a></h3>
+          <p>Uma frase sobre o que o projeto faz e que tecnologias usa.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <time>20XX</time>
+        <div>
+          <h3><a href="https://github.com/RodrigoJCM">Nome do projeto</a></h3>
+          <p>Uma frase sobre o que o projeto faz e que tecnologias usa.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <time>20XX</time>
+        <div>
+          <h3><a href="https://github.com/RodrigoJCM">Nome do projeto</a></h3>
+          <p>Uma frase sobre o que o projeto faz e que tecnologias usa.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <ul class="contact">
+        <li><a href="https://github.com/RodrigoJCM">github.com/RodrigoJCM</a></li>
+        <!-- EDITA: o teu email -->
+        <li><a href="mailto:o-teu-email@exemplo.pt">o-teu-email@exemplo.pt</a></li>
+      </ul>
+    </section>
+  </main>
+
+</div>
+</body>
+</html>
